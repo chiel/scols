@@ -1,0 +1,30 @@
+{
+  "name": "scols",
+  "version": "0.1.0",
+  "description": "Scrolling columns within a container element",
+  "keywords": [
+    "scrolling",
+    "columns"
+  ],
+  "author": "chielkunkels",
+  "homepage": "https://github.com/chielkunkels/scols",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chielkunkels/scols.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chielkunkels/scols/issues"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "mkdir -p dist && browserify -s SCols index.js | tee dist/scols.js | uglifyjs | tee dist/scols.min.js | gzip > dist/scols.min.js.gz"
+  },
+  "dependencies": {
+    "microevent": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "uglifyjs": "^2.4.10"
+  }
+}
